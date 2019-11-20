@@ -7,20 +7,19 @@
 ## 2019/04/18/ create
 #####################################################
 
-# TODO: Update API end point of object storage
-objEndPoint="objectstorage.us-ashburn-1.oraclecloud.com"
+# Load conf
+. function.conf
 
-# TODO: Update object storage info: check OCI console
-namespace="xxx"
-bucketName="xxx"
+objEndPoint=$objEndPoint
+namespace=$namespace
+bucketName=$bucketName
 
 # Shell function for file copy or put object
 function oci-curl {
-	# TODO: update these values to your own
-		local tenancyId="ocid1.tenany.xxx";
-		local authUserId="ocid1.user.oc1..xxx";
-		local keyFingerprint="cd:xxx";
-		local privateKeyPath=".key/private.pem";
+		local tenancyId=$tenancyId;
+		local authUserId=$authUserId;
+		local keyFingerprint=$keyFingerprint;
+		local privateKeyPath=$privateKeyPath;
 
 	local alg=rsa-sha256
 	local sigVersion="1"
